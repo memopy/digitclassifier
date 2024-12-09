@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
+import os
 
-data = pd.read_csv(r"C:\Users\mehme\OneDrive\Desktop\neural network\train.csv")
+data = pd.read_csv(f"{os.path.dirname(os.path.abspath(__file__))}/train.csv")
 
 data = np.array(data)
 m, n = data.shape
@@ -81,4 +82,6 @@ correct = 0
 for i in range(100):
     feedforward(X_dev[:,i,None])
     correct += np.argmax(cache["A2"],0) == Y_dev[i]
-    print(correct/i*100)
+    print(f"Networks prediction : {np.argmax(cache["A2"],0)}")
+    print(f"Real answer : {Y_dev[i]}")
+    print(f"Current accuracy is %{correct/i*100}")
