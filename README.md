@@ -13,3 +13,4 @@ almost %92 with train data
 https://www.kaggle.com/competitions/digit-recognizer/data
 github doesnt allow me to upload the csv file so you have to download it from here
 and kaggle wants you to have an account to download the dataset
+and if youre gonna use this neural network make sure to put the csv file in the same directory as the .py
